@@ -15,6 +15,45 @@ The reason why I have made it so is to enable more people to contribute to other
 ## --
 This project is a demo project for dacade.org, please be free to criticize.
 
+# Installation
+
+Open Terminal {Ctrl+Alt+T}
+
+```sh
+https://github.com/nadiarei/celo-cinema-dapp.git
+```
+
+```sh
+cd celo-cinema-dapp
+```
+If you are using [VScode](https://code.visualstudio.com)
+```sh
+code .
+```
+
+This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
+
+```sh
+npm install
+```
+
+## Start a development server
+
+```sh
+npm run dev
+```
+
+## Build
+
+```sh
+npm run build
+```
+## Usage
+1. Install the [CeloExtensionWallet](https://chrome.google.com/webstore/detail/celoextensionwallet/kkilomkmpmkbdnfelcpgckmpcaemjcdh) from the google chrome store.
+2. Create or import a wallet.
+3. Go to [https://celo.org/developers/faucet](https://celo.org/developers/faucet) and get tokens for the alfajores testnet.
+4. Switch to the alfajores testnet in the CeloExtensionWallet.
+
 ## Connect with me
 - On Twitter - [@kenharlbar](https://twitter.com/kenharlbar)
 - On Instagram - [@kenharlbar](https://instagram.com/kenharlbar)
