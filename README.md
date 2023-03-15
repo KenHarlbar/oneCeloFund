@@ -13,6 +13,8 @@ The reason why I have made it so is to enable more people to contribute to other
 * CSS / Bootstrap5
 
 ## --
+
+[Demo App](https://kenharlbar.github.io/oneDollarFund)
 This project is a demo project for dacade.org, please be free to criticize.
 
 # Installation
