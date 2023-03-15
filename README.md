@@ -12,6 +12,6 @@ This is an app that enables people to donate to the cause/need of other people.
 This project is a demo project for dacade.org, please be free to criticize.
 
 ## Connect with me
-On Twitter - [@kenharlbar](https://twitter.com/kenharlbar)
-On Instagram - [@kenharlbar](https://instagram.com/kenharlbar)
-On Github - [@kenharlbar](https://github.com/kenharlbar)
+- On Twitter - [@kenharlbar](https://twitter.com/kenharlbar)
+- On Instagram - [@kenharlbar](https://instagram.com/kenharlbar)
+- On Github - [@kenharlbar](https://github.com/kenharlbar)
