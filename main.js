@@ -1,7 +1,7 @@
 import Web3 from "web3";
 import { newKitFromWeb3 } from "@celo/contractkit";
 import BigNumber from "bignumber.js";
-import oneDollarFundAbi from "/contract/marketplace.abi.json";
+import marketplaceAbi from "/contract/marketplace.abi.json";
 import erc20Abi from "../contract/erc20.abi.json";
 
 const ERC20_DECIMALS = 18;
@@ -25,7 +25,7 @@ const connectCeloWallet = async function () {
       const accounts = await kit.web3.eth.getAccounts();
       kit.defaultAccount = accounts[0];
 
-      contract = new kit.web3.eth.Contract(onedollarfundAbi, MPContractAddress);
+      contract = new kit.web3.eth.Contract(marketplaceAbi, MPContractAddress);
     } catch (error) {
       notification(`⚠️ ${error}.`);
     }
@@ -63,8 +63,7 @@ const getDonations = async function () {
         description: d[3],
         location: d[4],
         budget: new BigNumber(d[5]),
-        minimumDonationAmount: new BigNumber(d[6]),
-        totalAmountGotSoFar: new BigNumber(d[7]),
+        totalAmountGotSoFar: new BigNumber(d[6]),
       });
     });
     _donations.push(_donation);
@@ -88,7 +87,7 @@ function donationTemplate(_donation) {
     <div class="card mb-4">
       <img class="card-img-top" src="${_donation.image}" alt="...">
       <div class="position-absolute top-0 end-0 bg-warning mt-4 px-2 py-1 rounded-start">
-        ${_donation.budget - _donation.totalAmountGotSoFar} left
+        $${_donation.budget - _donation.totalAmountGotSoFar} left
       </div>
       <div class="card-body text-left p-4 position-relative">
         <div class="translate-middle-y position-absolute top-0">
