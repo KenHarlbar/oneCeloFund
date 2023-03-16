@@ -51,6 +51,11 @@ contract onedollarfund {
         string memory _location,
         uint256 _budget
     ) public {
+        require(bytes(_name).length > 0, "Name cannot be empty.");
+        require(bytes(_image).length > 0, "Image URL cannot be empty.");
+        require(bytes(_description).length > 0, "Description cannot be empty.");
+        require(bytes(_location).length > 0, "Location cannot be empty.");
+        require(_budget > 0, "Budget must be greater than zero.");
         uint256 _totalAmountGotSoFar = 0;
         donations[donationsLength] = Donation(
             payable(msg.sender),
@@ -88,17 +93,28 @@ contract onedollarfund {
         );
     }
 
-    function donate(uint256 _index) public payable {
-        require(
-            IERC20Token(cUsdTokenAddress).transferFrom(
-                msg.sender,
-                donations[_index].owner,
-                1
-            ),
-            "Transfer failed."
-        );
-        donations[_index].totalAmountGotSoFar += 1;
-    }
+
+function donate(uint256 _index, uint256 _amount) public {
+    require(_index < donationsLength, "Invalid index.");
+    require(_amount > 0, "Donation amount must be greater than zero.");
+    require(
+        IERC20Token(cUsdTokenAddress).transferFrom(
+            msg.sender,
+            address(this),
+            _amount
+        ),
+        "Transfer failed."
+    );
+    donations[_index].totalAmountGotSoFar += _amount;
+    require(
+        IERC20Token(cUsdTokenAddress).transfer(
+            donations[_index].owner,
+            _amount
+        ),
+        "Transfer failed."
+    );
+}
+
 
     function getDonationsLength() public view returns (uint256) {
         return (donationsLength);
