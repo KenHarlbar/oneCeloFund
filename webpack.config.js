@@ -1,35 +1,32 @@
 const path = require("path");
 const webpack = require("webpack");
+const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  devtool: "eval-cheap-module-source-map",
+  devtool: "cheap-module-eval-source-map",
   entry: {
-    main: [
-      "webpack-dev-server/client?http://localhost:3000",
-      "webpack/hot/dev-server",
-      "./index.js"
-    ]
+    main: path.resolve(process.cwd(), "src", "main.js"),
   },
   output: {
     path: path.resolve(process.cwd(), "docs"),
-    publicPath: ""
+    publicPath: "",
   },
   node: {
-    __dirname: false,
-    __filename: false,
-    global: true
+    fs: "empty",
+    net: "empty",
   },
   watchOptions: {
-    aggregateTimeout: 300,
-    poll: 500
+    // ignored: /node_modules/,
+    aggregateTimeout: 300, // After seeing an edit, wait .3 seconds to recompile
+    poll: 500, // Check for edits every 5 seconds
   },
   plugins: [
+    new FriendlyErrorsWebpackPlugin(),
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(process.cwd(), ".", "index.html")
-    })
-  ]
-}
-
+      template: path.resolve(process.cwd(), "public", "index.html"),
+    }),
+  ],
+};
