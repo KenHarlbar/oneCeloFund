@@ -2,7 +2,7 @@ import Web3 from "web3"
 import { newKitFromWeb3 } from "@celo/contractkit"
 import onedollarfundAbi from "../contracts/onedollarfund.abi.json"
 
-const ContractAddress = "0x5334EA34BCADA7f9559aF476c38727515BCD7F1F";
+const ContractAddress = "0x1D2F9d30d59B0aBDd7eA8AA085E8f497C0526778";
 let kit
 let contract
 let campaigns = []
