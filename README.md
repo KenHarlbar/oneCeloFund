@@ -22,11 +22,11 @@ This project is a demo project for dacade.org, please be free to criticize.
 Open Terminal {Ctrl+Alt+T}
 
 ```sh
-https://github.com/nadiarei/celo-cinema-dapp.git
+https://github.com/KenHarlbar/oneDollarFund.git
 ```
 
 ```sh
-cd celo-cinema-dapp
+cd oneDollarFund
 ```
 If you are using [VScode](https://code.visualstudio.com)
 ```sh
