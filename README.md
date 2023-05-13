@@ -1,8 +1,8 @@
-# One Celo Fund
+# One Dollar Fund
 
 This is an app that enables people to donate to the cause/need of other people.
 
-Anyone who wishes to donate through the app can only donate a CELO, hence, oneCeloFund app.
+Anyone who wishes to donate through the app can only donate a dollar, hence, oneDollarFund app.
 
 The reason why I have made it so is to enable more people to contribute to other people's need instead of just a few poeple (that is, cultivating the spirit of helping with the little each and everyone of us have).
 
@@ -14,7 +14,7 @@ The reason why I have made it so is to enable more people to contribute to other
 
 ## --
 
-[Demo App](https://kenharlbar.github.io/oneCeloFund)
+[Demo App](https://kenharlbar.github.io/oneDollarFund)
 This project is a demo project for dacade.org, please be free to criticize.
 
 # Installation
@@ -22,11 +22,11 @@ This project is a demo project for dacade.org, please be free to criticize.
 Open Terminal {Ctrl+Alt+T}
 
 ```sh
-https://github.com/KenHarlbar/oneCeloFund.git
+https://github.com/KenHarlbar/oneDollarFund.git
 ```
 
 ```sh
-cd oneCeloFund
+cd oneDollarFund
 ```
 If you are using [VScode](https://code.visualstudio.com)
 ```sh
